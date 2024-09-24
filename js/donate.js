@@ -46,12 +46,23 @@
            donationInput.value = '';
           }
 
-     //  add transaction to history
+     //  current date and time
      function addHistory(amount, donationName) {
        const historyList = document.getElementById('history-list');
        const listItem = document.createElement('li');
        const now = new Date();
-       const timeString = now.toLocaleString();
+
+       const dateString= now.toLocaleDateString('en-GB',{
+         year: 'numeric',
+         month: 'long',
+         day: 'numeric'
+       });
+
+       const timeString = now.toLocaleTimeString('en-GB',{
+         hour: '2-digit',
+         minute: '2-digit',
+         hour12: 'true'
+       });
        listItem.innerText = `${timeString} - Donated ${amount} BDT to ${donationName}`;
        historyList.appendChild(listItem);
      }

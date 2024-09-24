@@ -12,24 +12,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-Lexend">
-     <!-- navbar donate-->
+     <!-- navbar item-->
 
      <header class="sticky top-0 z-50 bg-base-300">
-        <nav class="navbar flex justify-between items-center p-4 shadow-md">
-          <button id ="blogBtn" class="btn  text-[#111111] bg-[#B4F461]">Blog</button>
+        <nav class="navbar flex  justify-between 
+        items-center p-4 shadow-md space-y-4 md:space-y-0">
 
-          <div class="navbar-Medium  space-x-2 hidden sm:block">
+          <button id ="blogBtn" class="btn  
+          text-[#111111] bg-[#B4F461] w-full md:w-auto">Blog</button>
+
+           <div class="navbar-Medium flex items-center space-x-2 ">
             <img width="30px" src="assets/logo.png" alt="">
-            <a class=" font-semibold normal-case text-lg md:text-sm
+            <a class=" font-semibold  text-lg md:text-sm
             text-[#111111]  ">Donate Bangladesh</a>
-        </div>  
+        </div>   
 
           <div class=" flex items-center space-x-2">
             <img src="assets/coin.png" class="h-8 w-8" alt="">
             <span id="account-balance" class="btn text-lg 
-            font-semibold bg-gray-200">5500 BDT</span>
-           
+            font-semibold bg-gray-200">5500 BDT</span>        
           </div>
+
         </nav>
       </header>
 
@@ -48,14 +51,15 @@
        <div id="donation-Section">
           <!-- card-1 -->
         <section class="card card-side card-base-100 
-        shadow-lg rounded-lg flex items-center p-2">
+        shadow-lg rounded-lg flex  lg:flex-row items-center 
+        p-2 space-y-4 lg:space-y-0">
             <div>
-                <img src="assets/noakhali.png" alt="" class="rounded-lg ">
+                <img src="assets/noakhali.png" alt="" class="rounded-lg w-full lg:w-auto">
                </div>
              
                <div class="card-body ">
                 
-                <div class=" flex items-center ">
+                <div class=" flex items-center space-x-2">
                   <img src="assets/coin.png" class="h-8 w-8" alt="">
                   <span id="total-donate1" class="current-donation btn text-lg 
                   font-semibold bg-gray-200">10200 BDT</span>
@@ -83,7 +87,8 @@
 
           <!-- card-2 -->
          <section  class="card card-side card-base-100 
-          shadow-lg rounded-lg flex items-center p-2">
+         shadow-lg rounded-lg flex  lg:flex-row items-center 
+         p-2 space-y-4 lg:space-y-0">
               <div>
                   <img src="assets/feni.png" alt="" class="rounded-lg ">
                  </div>
@@ -122,14 +127,15 @@
           <!-- card-3 -->
 
            <section class="card card-side card-base-100 
-          shadow-lg rounded-lg flex items-center p-2">
+           shadow-lg rounded-lg flex  lg:flex-row items-center 
+           p-2 space-y-4 lg:space-y-0">
               <div>
                   <img src="assets/quota-protest.png" alt="" class="rounded-lg ">
                  </div>
                
-                 <div class="card-body ">
+                 <div class="card-body">
                   
-                  <div class=" flex items-center ">
+                  <div class=" flex items-center">
                     <img src="assets/coin.png" class="h-8 w-8" alt="">
                     <span id="total-donate3" class="btn text-lg 
                     font-semibold bg-gray-200">2400 BDT</span>
@@ -170,7 +176,7 @@
           
               </ul>
           </div>
-
+          
           <!-- modal -->
 
           <div id="modal" class="modal hidden ">
