@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-Lexend">
-     <!-- Navbar -->
+     <!-- navbar -->
 
      <header class="sticky top-0 z-50 bg-base-300">
         <nav class="navbar flex justify-between items-center p-4 shadow-md">
@@ -31,6 +31,53 @@
         <button id="history-button" class="btn btn-xs sm:btn-sm 
         md:btn-md lg:btn-lg  w-[100px] h-[20px]">History</button>
        </div>
+
+       <!-- main section -->
+        <!-- card-1 -->
+       <main class="container mx-auto my-10">
+
+        <section id="donationSection" class="card card-side card-base-100 shadow-lg flex items-center p-2">
+            <div>
+                <img src="assets/noakhali.png" alt="" class="rounded-lg ">
+               </div>
+             
+               <div class="card-body">
+                  <div class="text-white">
+                  <img width="30px" src="assets/coin.png" alt="">
+                  <a id="total-donate1" class=" text-[#111111] w-[110px] h-[44px]">0 BDT</a>
+                  </div>
+                
+                <h4 id="transaction-one" class="card-title">Donate for Flood at Noakhali, Bangladesh</h4>
+                <p class="text-xs"> The recent floods in Noakhali have caused significant <br> damage to homes
+                    infrastructure. Your donation will <br> help provide essential supplies and  
+                    to <br> those affected by this disaster. Every contribution,<br> big or small, makes
+                    difference. Please join us in <br> supporting 
+                    the relief efforts and making a positive <br> impact on the lives of those in need.</p>
+         
+                    <div class="form-control gap-2"> 
+                     <div class="input-group ">
+                       <input id="donate-input-id-one" type="text"
+                        placeholder="Write Donation Amount" 
+                       class="input input-bordered w-full p-4 " required>
+                     </div>
+                     <div class="donate-class ">
+                        <button  class="donate-class btn w-full  h-14 bg-[#B4F461] 
+                        text-xl font-semibold "> Donate Now</button>
+                     </div>
+
+        </section>
+
+          <!-- Hidden history section -->
+          <div id="history-Section" class="container mx-auto hidden space-y-6">
+            <div class="card bg-base-100 shadow-xl p-6">
+              <h3 class="card-title">Donation History</h3>
+              <ul>
+                <li>No Donation made yet</li>
+              </ul>
+            </div>
+          </div>
+
+       </main>
     <script src="js/donate.js"></script>
 </body>
 </html>
