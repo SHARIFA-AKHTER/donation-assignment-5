@@ -11,8 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="font-Lexend">
+     <!-- Navbar -->
+
+     <header class="sticky top-0 z-50 bg-base-300">
+        <nav class="navbar flex justify-between items-center p-4 shadow-md">
+          <button id ="blogBtn" class="btn  text-[#111111] bg-[#B4F461]">Blog</button>
+          <img class="h-10 w-10" src="assets/logo.png" alt="">
+          <div class=" flex items-center space-x-2">
+            <span id="accountBalance" class="text-lg font-semibold">5500 BDT</span>
+            <img src="assets/coin.png" class="h-6 w-6" alt="">
+          </div>
+        </nav>
+      </header>
+      <div class="lg flex items-center justify-center gap-6 p-6">
+        <button id="donation-button" class="btn btn-xs sm:btn-sm md:btn-md 
+        lg:btn-lg bg-[#B4F461] w-[110px] h-[20px] ">Donation</button>
+  
+        <button id="history-button" class="btn btn-xs sm:btn-sm 
+        md:btn-md lg:btn-lg  w-[100px] h-[20px]">History</button>
+       </div>
     <script src="js/donate.js"></script>
 </body>
 </html>
