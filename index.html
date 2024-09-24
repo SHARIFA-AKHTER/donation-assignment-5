@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-Lexend">
-     <!-- navbar item-->
+     <!-- navbar donate-->
 
      <header class="sticky top-0 z-50 bg-base-300">
         <nav class="navbar flex justify-between items-center p-4 shadow-md">
@@ -26,12 +26,13 @@
 
           <div class=" flex items-center space-x-2">
             <img src="assets/coin.png" class="h-8 w-8" alt="">
-            <span id="accountBalance" class="btn text-lg 
+            <span id="account-balance" class="btn text-lg 
             font-semibold bg-gray-200">5500 BDT</span>
            
           </div>
         </nav>
       </header>
+
       <div class="lg flex items-center justify-center gap-6 p-6">
         <button id="donation-Btn" class="btn btn-xs sm:btn-sm md:btn-md 
         lg:btn-lg bg-[#B4F461] w-[110px] h-[20px] ">Donation</button>
@@ -44,7 +45,7 @@
       
        <main  class="container mx-auto my-10 space-y-6">
 
-       <div id=" donation-Section">
+       <div id="donation-Section">
           <!-- card-1 -->
         <section class="card card-side card-base-100 
         shadow-lg rounded-lg flex items-center p-2">
@@ -56,8 +57,8 @@
                 
                 <div class=" flex items-center ">
                   <img src="assets/coin.png" class="h-8 w-8" alt="">
-                  <span id="total-donate1" class="btn text-lg 
-                  font-semibold bg-gray-200">0 BDT</span>
+                  <span id="total-donate1" class="current-donation btn text-lg 
+                  font-semibold bg-gray-200">10200 BDT</span>
                 </div>
                 
                 <h4 id="transaction-one" class="card-title">Donate for Flood at Noakhali, Bangladesh</h4>
@@ -67,22 +68,21 @@
                     difference. Please join us in <br> supporting 
                     the relief efforts and making a positive <br> impact on the lives of those in need.</p>
          
-                    <div class="form-control gap-2"> 
-                     <div class="input-group ">
-                       <input id="donation-input1" type="text"
-                        placeholder="Write Donation Amount" 
-                       class="input input-bordered w-full p-4 " required>
-                     </div>
-                     <div class="donate-class ">
-                        <button  class="donate-Btn btn w-full  h-14 bg-[#B4F461] 
-                        text-xl font-semibold " onclick="showAlert()"> Donate Now</button>
-                     </div>
-                    </div>
-                     
+                    <div class="form-control gap-2">
+                      <div class="input-group">
+                          <input id="donation-input1" type="text" placeholder="Write Donation Amount" 
+                          class="input input-bordered w-full p-4" required>
+                      </div>
+                      <div class="donate-class">
+                          <button class="donate-Btn btn w-full h-14 bg-[#B4F461] text-xl font-semibold"
+                           onclick="processDonation(1)">Donate Now</button>
+                      </div>
+                  </div>
+              </div>
         </section>
 
           <!-- card-2 -->
-          <section  class="card card-side card-base-100 
+         <section  class="card card-side card-base-100 
           shadow-lg rounded-lg flex items-center p-2">
               <div>
                   <img src="assets/feni.png" alt="" class="rounded-lg ">
@@ -118,10 +118,10 @@
                        </div>
                       </div>
                        
-          </section>
+          </section> 
           <!-- card-3 -->
 
-          <section class="card card-side card-base-100 
+           <section class="card card-side card-base-100 
           shadow-lg rounded-lg flex items-center p-2">
               <div>
                   <img src="assets/quota-protest.png" alt="" class="rounded-lg ">
@@ -158,18 +158,17 @@
                        </div>
                       </div>
                        
-          </section>
+          </section> 
        </div>
   
 
           <!-- Hidden history section -->
-          <div id="history-Section" class="container mx-auto hidden space-y-6">
-            <div class="card bg-base-100 shadow-xl p-6">
-              <h3 class="card-title">Donation History</h3>
-              <ul>
-                <li>No Donation made yet</li>
+          <div id="history-Section" class=" hidden">
+            
+              <h2 class="text-lg font-bold">Donation History</h2>
+              <ul id="history-list" class="list-disc pl-5 space-y-2">
+          
               </ul>
-            </div>
           </div>
 
           <!-- modal -->

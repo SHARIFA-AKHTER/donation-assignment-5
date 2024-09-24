@@ -1,52 +1,57 @@
+// donation and history section
 
-// function showAlert(){
-//     alert("Thank you for your donation!")
-// }
+ document.getElementById('history-Btn').addEventListener('click', () => {
+    document.getElementById('donation-Section').classList.add('hidden');
+    document.getElementById('history-Section').classList.remove('hidden');
+ })
+ document.getElementById('donation-Btn').addEventListener('click', () => {
+    document.getElementById('history-Section').classList.add('hidden');
+    document.getElementById('donation-Section').classList.remove('hidden');
+ });
 
-//Donation and History Button
-
-    const donationSection = document.getElementById('donation-Section');
-    const historySection = document.getElementById('history-Section');
-    const donationBtn= document.getElementById('donation-Btn');
-    const historyBtn = document.getElementById('history-Btn')
-
-    donationBtn .addEventListener('click',function(){
-        historySection.style.display = 'none';
-        donationSection.style.display ='block';
-      
-    });
-
-     historyBtn.addEventListener('click',function(){
-         donationSection.style.display = 'none';
-         historySection.style.display = 'block';
-     })
-    // console.log(donationBtn,historyBtn)
+       //  Process donation
+       function processDonation(cardId) {
+          const donationInput = document.getElementById('donation-input' + cardId);
+          const donationAmount = parseFloat(donationInput.value);
+          const accountBalanceElement = document.getElementById('account-balance');
+          let accountBalance = parseFloat (accountBalanceElement.innerText.split(' ')[0]);
 
 
+         if (isNaN(donationAmount) || donationAmount <= 0 ){
+             alert('please enter a valid donation amount.');
+             return;
+         }
+         if (donationAmount > accountBalance){
+             alert('Donation amount exceeds account balance');
+             return;
+         }
 
-//     if(section === 'donation'){
-//         donationSection.classList.remove('hidden');
-//         historySection.classList.add('hidden');
-//         donationBtn.classList.add('active');
-//         historyBtn.classList.remove('active');
-//     }
-//     else{
-//         donationSection.classList.add('hidden');
-//         historySection.classList.remove('hidden');
-//         donationBtn.classList.remove('active');
-//         historyBtn.classList.add('active');
-//     }
-  
-// }
+         // account balance
+          accountBalance -= donationAmount;
+          accountBalanceElement.innerText = accountBalance + ' BDT';
 
-// document.getElementById('donationBtn').addEventListener('click',() => toggleSection('donation'));
-// document.getElementById(' historyBtn').addEventListener('click',() => toggleSection('history'));
+          // update current account balance
 
-// function donate(cardId, currentDonation){
-//     const donationInput = document.getElementById(`donationInput${cardId}`).value ;
-//     const totalDonate =parseFloat(donationInput);
+          const currentDonationElement = document.getElementById('total-donate' + cardId);
+          let currentDonation = parseFloat(currentDonationElement.innerText.split(' ')[0]);
+          currentDonation += donationAmount;
+          currentDonationElement.innerText = currentDonation + ' BDT';
 
-//     if(!totalDonate|| totalDonate <=0 || totalDonate > accountBalance);
-//     alert('Invalid donation amount!');
-//     return;
-//  
+
+         // transaction history
+
+          addHistory(donationAmount,'Flood at Noakhali,Bangladesh');
+
+           // input
+           donationInput.value = '';
+          }
+
+     //  add transaction to history
+     function addHistory(amount, donationName) {
+       const historyList = document.getElementById('history-list');
+       const listItem = document.createElement('li');
+       const now = new Date();
+       const timeString = now.toLocaleString();
+       listItem.innerText = `${timeString} - Donated ${amount} BDT to ${donationName}`;
+       historyList.appendChild(listItem);
+     }
