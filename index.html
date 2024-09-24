@@ -19,8 +19,9 @@
           <button id ="blogBtn" class="btn  text-[#111111] bg-[#B4F461]">Blog</button>
           <img class="h-10 w-10" src="assets/logo.png" alt="">
           <div class=" flex items-center space-x-2">
-            <span id="accountBalance" class="text-lg font-semibold">5500 BDT</span>
             <img src="assets/coin.png" class="h-6 w-6" alt="">
+            <span id="accountBalance" class="text-lg font-semibold">5500 BDT</span>
+           
           </div>
         </nav>
       </header>
@@ -68,13 +69,34 @@
         </section>
 
           <!-- Hidden history section -->
-          <div id="history-Section" class="container mx-auto hidden space-y-6">
+          <div id="historySection" class="container mx-auto hidden space-y-6">
             <div class="card bg-base-100 shadow-xl p-6">
               <h3 class="card-title">Donation History</h3>
               <ul>
                 <li>No Donation made yet</li>
               </ul>
             </div>
+          </div>
+
+          <!-- modal -->
+
+          <div id="modal" class="modal hidden">
+            <div class="modal-box flex flex-col justify-center 
+            items-center space-y-4">
+            <h3 class="text-lg font-bold">Congrates!</h3>
+    
+             <img class="w-10" src="assets/coin.png" alt="">
+                <p>You Have 
+                    Donated for Humankind
+                </p>
+                <h3 class="text-xl font-bold text-[#111111]">Successfully</h3>
+                <div class="modal-action">
+                    <button id="closeModal" class="btn">Close confirmation</button>
+
+                </div>
+
+            </div>
+
           </div>
 
        </main>
