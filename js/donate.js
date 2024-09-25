@@ -1,5 +1,6 @@
 
-// donation section and history section
+// donate function
+// button and section
 document.getElementById('history-Btn').addEventListener('click', () => {
   document.getElementById('donation-Section').classList.add('hidden');
   document.getElementById('history-Section').classList.remove('hidden');
